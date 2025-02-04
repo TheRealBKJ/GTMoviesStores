@@ -23,5 +23,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Django admin panel
-path('', include('home.urls')), #empty quotations to shwo that its default page
+    path('', include('home.urls')), #empty quotations to show that its default page
+    path('movies/', include('movies.urls'))
+
 ]
