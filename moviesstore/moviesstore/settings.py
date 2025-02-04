@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'home',
     'movies',
 ]
-
+#i am cracked
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
