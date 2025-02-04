@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from django.contrib import admin
 from django.contrib.auth import views
@@ -23,4 +23,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Django admin panel
+path('', include('home.urls')), #empty quotations to shwo that its default page
 ]
