@@ -31,27 +31,55 @@
     background-size: cover;
     color: white;
 }
-
-
+/* Footer Main Section */
 .ms-footer {
-  background-color: #202020;
+  background-color: #2E2E2E; /* Dark gray background */
+  color: white;
+  padding: 20px 0; /* Compact spacing */
 }
+
+.ms-footer h5 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 .ms-footer p {
-  color: #7F7F7F;
-  font-size: 13px;
+  font-size: 14px;
+  color: #bfbfbf; /* Light gray text */
+  margin: 5px 0; /* Reduce spacing */
 }
+
+.ms-footer a {
+  color: #6ab43e; /* Green link color */
+  text-decoration: none;
+}
+
 .ms-footer a:hover {
-  color: #6ab43e;
-  text-decoration: none;
+  color: #fff; /* White on hover */
 }
-.ms-footer-bottom span{
-  font-size: 13px;
-  line-height: 38px;
+
+/* Divider Lines */
+.ms-footer hr {
+  height: 1px;
+  border: none;
+  background-color: #404040; /* Subtle gray for dividers */
+  margin: 10px 0;
 }
+
+/* Footer Bottom Section */
+.ms-footer-bottom {
+  background-color: #1F1F1F; /* Even darker footer bottom */
+  font-size: 13px; /* Smaller text for footer bottom */
+  padding: 10px 0; /* Compact spacing */
+}
+
 .ms-footer-bottom a {
-  color: #6ab43e;
-  text-decoration: none;
+  color: #6ab43e; /* Green link color */
 }
+
 .ms-footer-bottom a:hover {
-  color: #fff;
+  color: #fff; /* White on hover */
 }
+
