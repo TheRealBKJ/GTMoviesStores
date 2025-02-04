@@ -22,12 +22,36 @@
 }
 
 .masthead {
-    display: flex; /* Enables flexbox */
-    flex-direction: column; /* Stacks content vertically */
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
-    height: 200px; /* Matches the height of your header */
-    background: url("../img/background.jpg") no-repeat center fixed; /* Ensures the background image */
-    background-size: cover; /* Covers the entire area */
-    color: white; /* Ensures text is white */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: url("../img/background.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+.ms-footer {
+  background-color: #202020;
+}
+.ms-footer p {
+  color: #7F7F7F;
+  font-size: 13px;
+}
+.ms-footer a:hover {
+  color: #6ab43e;
+  text-decoration: none;
+}
+.ms-footer-bottom span{
+  font-size: 13px;
+  line-height: 38px;
+}
+.ms-footer-bottom a {
+  color: #6ab43e;
+  text-decoration: none;
+}
+.ms-footer-bottom a:hover {
+  color: #fff;
 }
