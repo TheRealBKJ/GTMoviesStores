@@ -2,4 +2,10 @@
   background: url("../img/background.jpg") no-repeat
     fixed;
   background-size: 100% auto;
+  background-color: white;
 }
+
+.text-white {
+    color: white; /* Ensures text is white */
+}
+
