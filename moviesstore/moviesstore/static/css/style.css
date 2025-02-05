@@ -1,0 +1,83 @@
+.bg-index{
+  background: url("../img/background.jpg") no-repeat
+    fixed;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.text-white {
+    color: white; /* Ensures text is white */
+}
+
+.navbar-nav .nav-link {
+    color: #FFFEF6; /* Sets link color */
+}
+.navbar-nav .nav-link:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+.bg-dark {
+  background-color: #2E2E2E !important;
+}
+
+.masthead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: url("../img/background.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+}
+/* Footer Main Section */
+.ms-footer {
+  background-color: #2E2E2E; /* Dark gray background */
+  color: white;
+  padding: 20px 0; /* Compact spacing */
+}
+
+.ms-footer h5 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ms-footer p {
+  font-size: 14px;
+  color: #bfbfbf; /* Light gray text */
+  margin: 5px 0; /* Reduce spacing */
+}
+
+.ms-footer a {
+  color: #6ab43e; /* Green link color */
+  text-decoration: none;
+}
+
+.ms-footer a:hover {
+  color: #fff; /* White on hover */
+}
+
+/* Divider Lines */
+.ms-footer hr {
+  height: 1px;
+  border: none;
+  background-color: #404040; /* Subtle gray for dividers */
+  margin: 10px 0;
+}
+
+/* Footer Bottom Section */
+.ms-footer-bottom {
+  background-color: #1F1F1F; /* Even darker footer bottom */
+  font-size: 13px; /* Smaller text for footer bottom */
+  padding: 10px 0; /* Compact spacing */
+}
+
+.ms-footer-bottom a {
+  color: #6ab43e; /* Green link color */
+}
+
+.ms-footer-bottom a:hover {
+  color: #fff; /* White on hover */
+}
+
