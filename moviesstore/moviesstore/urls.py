@@ -21,9 +21,13 @@ from django.contrib import admin
 from django.contrib.auth import views
 from django.urls import path
 
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls), # Django admin panel
     path('', include('home.urls')), #empty quotations to show that its default page
     path('movies/', include('movies.urls'))
 
 ]
+urlpatterns += static(settings.MEDIA_URL,
+    document_root=settings.MEDIA_ROOT)
