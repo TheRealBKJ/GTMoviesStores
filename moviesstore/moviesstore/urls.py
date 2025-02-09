@@ -26,8 +26,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls), # Django admin panel
     path('', include('home.urls')), #empty quotations to show that its default page
-    path('movies/', include('movies.urls'))
-
+    path('movies/', include('movies.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT)
