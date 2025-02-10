@@ -3,6 +3,8 @@ from django.contrib.auth import login as auth_login, authenticate
 from .forms import CustomUserCreationForm, CustomErrorList
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout as auth_logout
+
 
 @login_required
 def logout(request):
