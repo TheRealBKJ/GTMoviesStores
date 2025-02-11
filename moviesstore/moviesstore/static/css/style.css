@@ -1,34 +1,30 @@
-.bg-index{
-  background: url("../img/background.jpg") no-repeat
-    fixed;
-  background-size: 100% auto;
-  background-position: center;
-}
-
-.text-white {
-    color: white; /* Ensures text is white */
+.bg-index {
+  background: url("../img/background.jpg") no-repeat fixed center/cover;
 }
 
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1030; /* Ensures navbar stays above everything */
-    background-color: rgba(0, 0, 0, 0.95); /* Dark background with slight transparency */
+    z-index: 1030;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 10px 20px;
 }
 
 .navbar-nav .nav-link {
-    color: #030303;
-    transition: color 0.3s ease-in-out;
+    color: #f0f0f0;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #FFD700; /* Gold hover effect */
+    color: #FFD700;
     transform: scale(1.1);
 }
 
-.bg-dark {
-  background-color: #2E2E2E !important;
+body {
+    padding-top: 70px;
+    background-color: #121212;
+    color: white;
 }
 
 .masthead {
@@ -36,74 +32,72 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    background: url("../img/background.jpg") no-repeat center fixed;
-    background-size: cover;
+    min-height: 200px;
+    height: 40vh;
+    background: url("../img/background.jpg") no-repeat center/cover;
     color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-
-body {
-    padding-top: 600px;
-}
-/* Footer Main Section */
 .ms-footer {
-  background-color: #2E2E2E; /* Dark gray background */
+  background-color: #2E2E2E;
   color: white;
-  padding: 20px 0; /* Compact spacing */
+  padding: 30px 0;
+  text-align: center;
 }
 
 .ms-footer h5 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .ms-footer p {
-  font-size: 14px;
-  color: #bfbfbf; /* Light gray text */
-  margin: 5px 0; /* Reduce spacing */
+  font-size: 15px;
+  color: #bfbfbf;
+  margin: 8px 0;
 }
 
 .ms-footer a {
-  color: #6ab43e; /* Green link color */
+  color: #6ab43e;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 .ms-footer a:hover {
-  color: #fff; /* White on hover */
+  color: #fff;
 }
 
-/* Divider Lines */
 .ms-footer hr {
   height: 1px;
   border: none;
-  background-color: #404040; /* Subtle gray for dividers */
-  margin: 10px 0;
+  background-color: #404040;
+  margin: 15px 0;
 }
 
-/* Footer Bottom Section */
 .ms-footer-bottom {
-  background-color: #1F1F1F; /* Even darker footer bottom */
-  font-size: 13px; /* Smaller text for footer bottom */
-  padding: 10px 0; /* Compact spacing */
+  background-color: #1F1F1F;
+  font-size: 14px;
+  padding: 15px 0;
 }
 
-.ms-footer-bottom a {
-  color: #6ab43e; /* Green link color */
+.img-card-200, .img-card-400 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.ms-footer-bottom a:hover {
-  color: #fff; /* White on hover */
+.bg-dark {
+  background-color: #2E2E2E !important;
 }
 
-.img-card-200 {
-  width: fit-content;
-  max-height: 200px;
+.text-white {
+    color: white;
 }
 
-.img-card-400 {
-  width: fit-content;
-  max-height: 400px;
+a {
+  transition: all 0.3s ease-in-out;
 }
