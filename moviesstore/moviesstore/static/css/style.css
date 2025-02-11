@@ -9,12 +9,24 @@
     color: white; /* Ensures text is white */
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensures navbar stays above everything */
+    background-color: rgba(0, 0, 0, 0.95); /* Dark background with slight transparency */
+}
+
 .navbar-nav .nav-link {
-    color: #FFFEF6; /* Sets link color */
+    color: #030303;
+    transition: color 0.3s ease-in-out;
 }
+
 .navbar-nav .nav-link:hover {
-    color: #FFD700; /* Gold color on hover */
+    color: #FFD700; /* Gold hover effect */
+    transform: scale(1.1);
 }
+
 .bg-dark {
   background-color: #2E2E2E !important;
 }
@@ -28,6 +40,11 @@
     background: url("../img/background.jpg") no-repeat center fixed;
     background-size: cover;
     color: white;
+}
+
+
+body {
+    padding-top: 600px;
 }
 /* Footer Main Section */
 .ms-footer {
