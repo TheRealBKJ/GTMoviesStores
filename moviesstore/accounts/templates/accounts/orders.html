@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +38,7 @@
                   <td>{{ item.movie.id }}</td>
                   <td>
                     <a class="link-dark"
-                      href="{% url 'movies.show'
-                      id=item.movie.id %}">
+                      href="{% url 'movies.show' id=item.movie.id %}">
                       {{ item.movie.name }}
                     </a>
                   </td>
@@ -55,3 +57,4 @@
 </div>
 </body>
 </html>
+{% endblock content %}
