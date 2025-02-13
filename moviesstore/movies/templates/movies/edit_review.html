@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/movies.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="p-3">
   <div class="container">

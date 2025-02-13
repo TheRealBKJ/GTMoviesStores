@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'cart/cart.css' %}">
+{% endblock %}
 {% block content %}
 {% load static %}
 <!DOCTYPE html>

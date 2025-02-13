@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/accounts.css' %}">
+{% endblock %}
+{% block content %}
 <div class="p-3">
   <div class="container">
     <div class="row mt-3">
@@ -22,8 +19,7 @@
           <div class="card-body">
             <b>Date:</b> {{ order.date }}<br />
             <b>Total:</b> ${{ order.total }}<br />
-            <table class="table table-bordered
-              table-striped text-center mt-3">
+            <table class="table table-bordered table-striped text-center mt-3">
               <thead>
                 <tr>
                   <th scope="col">Item ID</th>
@@ -37,8 +33,7 @@
                 <tr>
                   <td>{{ item.movie.id }}</td>
                   <td>
-                    <a class="link-dark"
-                      href="{% url 'movies.show' id=item.movie.id %}">
+                    <a class="link-dark" href="{% url 'movies.show' id=item.movie.id %}">
                       {{ item.movie.name }}
                     </a>
                   </td>
@@ -55,6 +50,4 @@
     </div>
   </div>
 </div>
-</body>
-</html>
 {% endblock content %}

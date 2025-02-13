@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/accounts.css' %}">
+{% endblock %}
 {% block content %}
 <div class="p-3 mt-4">
   <div class="container">
