@@ -5,6 +5,9 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.models import User
+import uuid
+from .models import PasswordResetToken
+from django.contrib.auth import update_session_auth_hash
 
 
 @login_required
@@ -56,3 +59,61 @@ def signup(request):
             template_data['form'] = form
             return render(request, 'accounts/signup.html',
                           {'template_data': template_data})
+
+
+def password_reset(request):
+    template_data = {'title': 'Reset Password'}
+
+    if request.method == 'GET':
+        return render(request, 'accounts/password_reset.html', {'template_data': template_data})
+
+    elif request.method == 'POST':
+        username = request.POST.get('username')
+        try:
+            user = User.objects.get(username=username)
+            reset_token, created = PasswordResetToken.objects.get_or_create(user=user)
+            reset_token.token = str(uuid.uuid4())
+            reset_token.save()
+            template_data['message'] = f'Your reset token: {reset_token.token}'
+        except User.DoesNotExist:
+            template_data['error'] = 'User not found'
+
+        return render(request, 'accounts/password_reset.html', {'template_data': template_data})
+
+
+
+
+def password_reset_confirm(request):
+    template_data = {'title': 'Confirm Reset Password'}
+
+    if request.method == 'GET':
+        return render(request, 'accounts/password_reset_confirm.html', {'template_data': template_data})
+
+    elif request.method == 'POST':
+        username = request.POST.get('username')
+        token = request.POST.get('token')
+        new_password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+            reset_token = PasswordResetToken.objects.get(user=user, token=token)
+
+            # Update the user's password
+            user.set_password(new_password)
+            user.save()
+
+            # Keep the user logged in after resetting the password
+            update_session_auth_hash(request, user)
+
+            # Delete the token after successful reset
+            reset_token.delete()
+
+            return redirect('accounts.password_reset_success')  # Redirect to a success page
+
+        except (User.DoesNotExist, PasswordResetToken.DoesNotExist):
+            template_data['error'] = 'Invalid token or username'
+
+        return render(request, 'accounts/password_reset_confirm.html', {'template_data': template_data})
+
+def password_reset_success(request):
+    return render(request, 'accounts/password_reset_success.html')
